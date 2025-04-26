@@ -62,14 +62,14 @@ function timeAgo(date) {
 
 
 function login_with_google() {
-    window.location.href = "http://localhost:5000/auth/google";
+    window.location.href = "https://prog-4-by-mopok.onrender.com/auth/google";
 
 }
 
 
 
 function get_user_data() {
-    axios.get("http://localhost:5000/api/me", {
+    axios.get("https://prog-4-by-mopok.onrender.com/api/me", {
         withCredentials: true 
       })
       .then(response => {
@@ -93,7 +93,7 @@ function get_user_data() {
 
 
 function get_posts(){
-    axios.get('http://localhost:5000/posts')
+    axios.get('https://prog-4-by-mopok.onrender.com/posts')
       .then(function (response) {
         let posts = response.data;
         
