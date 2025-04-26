@@ -141,7 +141,7 @@ function get_user() {
 
 
   
-  axios.get(`http://localhost:5000/get-user?userId=${userId}`)
+  axios.get(`https://prog-4-by-mopok.onrender.com/get-user?userId=${userId}`)
   .then(function (response) {
     let user = response.data.user;
   
@@ -216,7 +216,7 @@ function get_post_comments(postId) {
 
 
 
-    axios.get(`http://localhost:5000/comments/${postId}`)
+    axios.get(`https://prog-4-by-mopok.onrender.com/comments/${postId}`)
     .then(function (response) {
     
 
@@ -280,7 +280,7 @@ function add_comment() {
 
 
    
-    axios.post("http://localhost:5000/create-comments",  {
+    axios.post("https://prog-4-by-mopok.onrender.com/create-comments",  {
         "content": comment_input,
         "googleId":googleId, 
         "postId": currentPostId
@@ -305,7 +305,7 @@ function add_comment() {
 
 function delete_post(currentPostId) {
 
-    axios.delete(`http://localhost:5000/delete-post?postId=${currentPostId}&googleId=${localStorage.getItem("googleId")}`)
+    axios.delete(`https://prog-4-by-mopok.onrender.com/delete-post?postId=${currentPostId}&googleId=${localStorage.getItem("googleId")}`)
 .then(response => {
 
     document.getElementById("user_posts").innerHTML = ""
