@@ -26,9 +26,11 @@ app.use(express.static('public'))
 app.use(cookieParser());
 
 app.use(cors({
-  origin: 'http://localhost:5000',
-  methods: ['GET', 'POST'], 
+  origin: ['http://localhost:5000', 'https://prog-4-by-mopok.onrender.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
 }));
+
 
 const DB_URI = process.env.MONGO_URI
 
@@ -47,7 +49,7 @@ mongoose.connect(DB_URI)
   passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: 'http://localhost:5000/auth/google/callback',
+    callbackURL: 'https://prog-4-by-mopok.onrender.com/auth/google/callback',
   },
   async function (token, tokenSecret, profile, done) {
     try {
@@ -116,7 +118,7 @@ app.get('/auth/google/callback',
 
 
 
-    res.redirect("http://localhost:5000/prog_4.html");
+    res.redirect("https://prog-4-by-mopok.onrender.com/prog_4.html");
   }
 );
 
