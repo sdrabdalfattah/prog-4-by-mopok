@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="MOPOK.png" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="prog_4.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mini Social media - prog 4 - by mopokdh</title>
+    </head>
+<body>
+    <header>
+
+        <div class="logged_in_container" id="logged_in_container">
+<div class="user_container" id="menuButton">
+<img id="header_img" src="" alt="">
+
+<svg  width="35" height="35" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path style="fill: white" d="M5 10C6.10457 10 7 10.8954 7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10Z" fill="#000000"></path>
+    <path style="fill: white" d="M12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10Z" fill="#000000"></path>
+    <path style="fill: white" d="M21 12C21 10.8954 20.1046 10 19 10C17.8954 10 17 10.8954 17 12C17 13.1046 17.8954 14 19 14C20.1046 14 21 13.1046 21 12Z" fill="#000000"></path>
+    </svg>
+</div>
+
+
+<button onclick="show_add_post_Box()">
+    <svg fill="white" width="35" height="35" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+        <g data-name="Layer 2">
+        
+        <g data-name="plus">
+        
+        <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"></rect>
+        
+        <path d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2z"></path>
+        
+        </g>
+        
+        </g>
+        
+        </svg>
+add post</button>
+
+        </div>
+
+
+        <button  onclick="login_with_google()" id="login_with_google" class="signing_btn">
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 48 48" style="border-radius: 50%;background-color: white;padding:3px;">
+                <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                </svg>
+<span>sign \ login with google</span>
+        </button>
+    </header>
+
+<div class="posts_container" id="posts_container">
+
+<!-- posts are here -->
+
+</div>
+
+
+
+<div class="img_review" id="img_review">
+    <img id="review_img" src="" alt="">
+    <button onclick="hideBox()">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="white" width="20" height="20" viewBox="0 0 30 30">
+            <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"></path>
+        </svg>
+    </button>
+</div>
+
+
+<div class="comments_pop_up" id="comments_pop_up">
+   <div class="pop_up_header">comments
+    <button onclick="hide_comments_Box()">
+
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="white" width="20" height="20" viewBox="0 0 30 30">
+            <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"></path>
+        </svg>
+
+    </button>
+   </div>
+   <div class="popup_body">
+
+
+    <div class="comment_body" id="comment_body">
+<!-- comments are here -->
+    </div>
+
+   </div>
+   <div class="add_comment_container">
+    <input type="text" placeholder="add comment . . ." id="comment_input" oninput="auto_stop(this)" autocomplete="off">
+        <button class="add_comment_btn" id="add_comment_btn" onclick="add_comment()">
+            <svg fill="white" width="30" height="30" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+
+                <path d="M227.82129,47.9209,175.26758,234.249A15.86994,15.86994,0,0,1,161.207,245.84961q-.69581.05859-1.38379.05762a15.85235,15.85235,0,0,1-14.41406-9.15235l-36.916-77.93359,53.28223-53.28223a8.00052,8.00052,0,0,0-11.31445-11.31445L97.17871,147.50684l-77.93359-36.916A15.9995,15.9995,0,0,1,21.751,80.73242L208.0791,28.17871A15.99909,15.99909,0,0,1,227.82129,47.9209Z"></path>
+              </svg>
+        </button>
+   </div>
+   <h1 id="char_count_comment" style="font-size: 15px;opacity: 0;">40 /60</h1>
+</div>
+
+
+
+<div class="add_post_container" id="add_post_container">
+
+    <div style="display: flex;width: 100%;max-width: 650px;justify-content: space-between;padding-inline: 30px;">
+        <h1  style=" margin-block: 5px; align-items: center;justify-content: space-between;width: 500px;">add post</h1>
+<button style="background-color: transparent;padding: 0;" onclick="hide_add_post_Box()">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="white" width="20" height="20" viewBox="0 0 30 30">
+        <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"></path>
+    </svg>
+</button>
+</div>
+<div class="add_post_body">
+    <h1 id="char_count" style="font-size: 15px;margin-left: 20px;">0 / 150</h1>
+    <textarea id="post_text" placeholder="write something . . ." oninput="autoResize(this)"></textarea>
+    <div class="upload_container" onclick="triggerUpload()">
+        <input type="file" id="post_img_input" accept="image/*" onchange="previewImage(event)">
+        <img id="post_img_preview" src="" >
+        <div class="upload_overlay">
+          <span>add an image</span>
+        </div>
+      </div>
+      
+</div>
+
+    <button onclick="add_post()" id="add_post_btn">add post</button>
+</div>
+
+
+
+
+
+<div id="contextMenu" class="context-menu">
+    <ul>
+      <li onclick="get_you_Id()"> your profile </li>
+      <li style="border: 1px dashed rgba(255, 0, 0, 0.507);" onclick="logout()"> log out </li>
+    </ul>
+  </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="prog_4.js"></script>
+<script src="axios.js"></script>
+</body>
+</html>
+
+
+
+
