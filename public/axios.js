@@ -150,7 +150,7 @@ function get_post_comments(postId) {
 
 
 
-    axios.get(`http://localhost:5000/comments/${postId}`)
+    axios.get(`https://prog-4-by-mopok.onrender.com/comments/${postId}`)
     .then(function (response) {
 
 
@@ -216,7 +216,7 @@ function add_comment() {
         showNotification("you have to login first", false);
       });
 
-      axios.post("http://localhost:5000/create-comments",  {
+      axios.post("https://prog-4-by-mopok.onrender.com/create-comments",  {
         "content": comment_input,
         "googleId":googleId, 
         "postId": currentPostId
@@ -278,7 +278,7 @@ function logout() {
     localStorage.removeItem("googleId");
   
     // إرسال طلب للخادم لمسح الكوكي
-    axios.post("http://localhost:5000/logout", {}, {
+    axios.post("https://prog-4-by-mopok.onrender.com/logout", {}, {
       withCredentials: true,
     })
     .then(res => {
