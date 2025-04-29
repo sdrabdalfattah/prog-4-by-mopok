@@ -25,11 +25,23 @@ app.use(passport.session());
 app.use(express.static('public'))
 app.use(cookieParser());
 
+const allowedOrigins = [
+  'http://localhost:5000',
+  'https://prog-4-by-mopok.onrender.com'
+];
+
 app.use(cors({
-  origin: ['http://localhost:5000', 'https://prog-4-by-mopok.onrender.com'],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
+  credentials: true
 }));
+
 
 
 const DB_URI = process.env.MONGO_URI
