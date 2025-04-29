@@ -540,7 +540,7 @@ cursor: pointer;
 
 
 .svg {display:none;
- width: 25px;
+ width: 20px;
       margin-right:10px;
  transform-origin: center;
  animation: rotate4 2s linear infinite;
