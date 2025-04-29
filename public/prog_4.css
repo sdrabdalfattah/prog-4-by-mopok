@@ -539,7 +539,7 @@ cursor: pointer;
                       }
 
 
-.svg {display:block;
+.svg {display:none;
  width: 25px;
       margin-right:10px;
  transform-origin: center;
