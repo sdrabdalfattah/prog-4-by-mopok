@@ -266,7 +266,8 @@ function add_post() {
     })
     .catch(error => {
         showNotification(error.response.data.error, false);
-        
+        console.log(error.response.data.error)
+         console.log(error)
     });
 }
 get_user_data();
