@@ -265,9 +265,9 @@ function add_post() {
         document.getElementById('char_count').innerText = "0 / 150";
     })
     .catch(error => {
-                console.log(error.response.data.error)
-         console.log(error)
-        showNotification(error.response.data.error, false);
+           let err = error.response.data.error
+         console.log(error , err)
+        showNotification(err, false);
     });
 }
 get_user_data();
