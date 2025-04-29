@@ -524,6 +524,9 @@ cursor: pointer;
                           color: white;
                           padding: 10px 16px;
                           border: none;
+                          display:flex;
+                          align-items:center;
+                          justify-content:center;
                           margin-block: 5px;
                           border-radius: 50px;
                           cursor: pointer;
@@ -536,13 +539,13 @@ cursor: pointer;
                       }
 
 
-svg {
- width: 3.25em;
+.svg {
+ width: 25px;
  transform-origin: center;
  animation: rotate4 2s linear infinite;
 }
 
-circle {
+.circle {
  fill: none;
  stroke: hsl(0, 0%, 0%);
  stroke-width: 4;
