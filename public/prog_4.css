@@ -920,7 +920,8 @@ gap: 0px;
 width: 85%;
 font-size: 14px;
 }
-
+.close-btn {background-color: transparent;
+}
 
 .img_review button{
 position: fixed;
