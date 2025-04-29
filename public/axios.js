@@ -242,7 +242,7 @@ function add_post() {
     const post_text = document.getElementById('post_text').value;
     const post_img_input = document.getElementById('post_img_input').files[0];
     let googleId =localStorage.getItem("googleId");
-
+document.getElementById('svg_loader').style.display = "block";
 
     const formData = new FormData();
     formData.append("post_content", post_text);
@@ -263,9 +263,11 @@ function add_post() {
         document.getElementById('post_img_input').value = "";
         document.getElementById('post_img_preview').src = "";
         document.getElementById('char_count').innerText = "0 / 150";
+        document.getElementById('svg_loader').style.display = "none";
     })
     .catch(error => {
         showNotification(error.response.data.error, false);
+        document.getElementById('svg_loader').style.display = "none";
     });
 }
 get_user_data();
