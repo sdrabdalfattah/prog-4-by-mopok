@@ -524,7 +524,7 @@ cursor: pointer;
                           color: white;
                           padding: 10px 16px;
                           border: none;
-                          display:none;
+                          display:flex;
                           align-items:center;
                           justify-content:center;
                           margin-block: 5px;
@@ -539,8 +539,9 @@ cursor: pointer;
                       }
 
 
-.svg {
+.svg {display:block;
  width: 25px;
+      margin-right:10px;
  transform-origin: center;
  animation: rotate4 2s linear infinite;
 }
