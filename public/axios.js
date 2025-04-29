@@ -208,7 +208,7 @@ function add_comment() {
     const comment_input = document.getElementById('comment_input').value;
     let googleId =localStorage.getItem("googleId");
 
-    axios.get("http://localhost:5000/api/me", {
+    axios.get("https://prog-4-by-mopok.onrender.com/api/me", {
         withCredentials: true 
       })
       .then()
@@ -250,7 +250,7 @@ function add_post() {
     formData.append("googleId", googleId);
 
 
-    axios.post("http://localhost:5000/create-post",  formData, {
+    axios.post("https://prog-4-by-mopok.onrender.com/create-post",  formData, {
         headers: {
             withCredentials: true, 
         }
