@@ -806,6 +806,8 @@ cursor: pointer;
                     }
                     
                     @media (max-width: 600px) {
+                         .add_post_container button {position:fixed;
+                                                   bottom:10px; }
                       .user_posts {
                         grid-template-columns: 1fr; 
                       }
