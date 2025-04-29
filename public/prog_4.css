@@ -524,7 +524,7 @@ cursor: pointer;
                           color: white;
                           padding: 10px 16px;
                           border: none;
-                          display:flex;
+                          display:none;
                           align-items:center;
                           justify-content:center;
                           margin-block: 5px;
@@ -547,7 +547,7 @@ cursor: pointer;
 
 .circle {
  fill: none;
- stroke: hsl(0, 0%, 0%);
+ stroke: hsl(0, 0%, 100%);
  stroke-width: 4;
  stroke-dasharray: 1, 200;
  stroke-dashoffset: 0;
